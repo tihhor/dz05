@@ -1,5 +1,7 @@
 # главное меню
-import os
+from os_func import *
+from account  import *
+
 menu_list = [
     '1. создать папку;',
     '2. удалить (файл//папку);',
@@ -15,6 +17,8 @@ menu_list = [
     '12. выход.',
 ]
 choice = 0
+
+# печать списка меню
 def print_menu():
     print('Выберите пункт меню:')
     for i in menu_list:
