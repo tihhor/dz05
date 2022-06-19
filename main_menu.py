@@ -1,10 +1,11 @@
-# главное меню
+# главное мен
 from os_func import *
 from account  import *
+from victory import *
 
 menu_list = [
     '1. создать папку;',
-    '2. удалить (файл//папку);',
+    '2. удалить (файл/папку);',
     '3. копировать (файл/папку);',
     '4. просмотр содержимого рабочей директории;',
     '5. посмотреть только папки;',
@@ -16,7 +17,9 @@ menu_list = [
     '11. смена директории (*необязательный пункт);',
     '12. выход.',
 ]
+import os
 choice = 0
+start_dir = os.getcwd()
 
 # печать списка меню
 def print_menu():
@@ -50,7 +53,7 @@ while choice != '12':
     elif choice == '10':
         account()
     elif choice == '11':
-        change_dir()
+        change_dir(start_dir)
     elif choice == '12':
         print('Программа завершена')
 
